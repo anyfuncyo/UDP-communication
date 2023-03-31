@@ -52,7 +52,7 @@ public class MyServer {
 						new ByteArrayInputStream(packetIn.getData(), packetIn.getOffset(), packetIn.getLength()));
 				int sequenceNumber = in.readInt();
 
-				// Read the second line from the packet which has the string `umbrella`.
+				// Read the second line from the packet which has the string `hello world`.
 				InputStreamReader reader = new InputStreamReader(in);
 				BufferedReader bf = new BufferedReader(reader);
 				String receivedData = bf.readLine();

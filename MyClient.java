@@ -148,10 +148,10 @@ public class MyClient {
 
 						/*
 						 * Read the line of data from file and add sequence number to the packet. Each
-						 * packet created will contain the string `umbrella` and a unique sequence
+						 * packet created will contain the string `hello world` and a unique sequence
 						 * number in its payload.
 						 */
-						FileReader fr = new FileReader("umbrella.txt");
+						FileReader fr = new FileReader("hello.txt");
 						BufferedReader br = new BufferedReader(fr);
 						String fileText;
 						fileText = br.readLine();
@@ -196,7 +196,7 @@ public class MyClient {
 					DatagramPacket packetIn = new DatagramPacket(dataBuffer, dataBuffer.length);
 					clientSocket.receive(packetIn);
 
-					// Printing the acknowledgement number (ACK) and response message `umbrella`
+					// Printing the acknowledgement number (ACK) and response message `hello world`
 					// from the packet receives.
 					DataInputStream input = new DataInputStream(
 							new ByteArrayInputStream(packetIn.getData(), packetIn.getOffset(), packetIn.getLength()));
